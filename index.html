@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind CSS and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <header>
+        <nav class="flex justify-between h-15 shadow-xs px-5 items-center">
+
+            <!-- Logo -->
+            <div class="flex gap-3 items-center">
+                <div><i class="fa-solid fa-bars text-2xl"></i></div>
+                <div class="text-xl font-bold flex items-center gap-1"><i class="fa-brands fa-youtube text-3xl text-red-600"></i> MyTube</div>
+            </div>
+
+            <!-- Search -->
+            <div class="flex gap-4 items-center">
+               <div>
+                 <label class="input w-xl rounded-full">
+                    
+                <input class="text-md" type="search" required placeholder="Search" />
+                <svg class="h-[2em] opacity-50" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                        <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                        >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                </label>
+               </div>
+
+                <div>
+                    <div class="h-10 w-10 bg-base-200 rounded-full flex justify-center items-center">
+                        <i class="fa-solid fa-microphone text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center gap-2.5">
+                <div>
+                    <button popovertarget="popover-1"   class="btn dropdown dropdown-start rounded-full text-md btn-md"> <i class="fa-solid text-xl fa-plus"></i> Create
+                    
+                         <ul class="dropdown menu w-35 rounded-box bg-base-100 shadow-sm"
+                    popover id="popover-1">
+                    <li><a>Upload video</a></li>
+                    <li><a>Go Live</a></li>
+                    <li><a>Create Post</a></li>
+                    </ul>
+                    </button>
+                        
+                </div>
+                
+                <div>
+
+                    <i class="fa-solid text-xl fa-bell"></i>
+                </div>
+                <div>
+
+                    <div class="flex gap-2">
+                        
+                        <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                            <img
+                                alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            </div>
+                        </div>
+                        <ul
+                            tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-12">
+        <aside class="col-span-2 p-2.5">
+            <div class="p-2.5">
+                <ul>
+                    <a href=""><li  class="h-10 py-2 px-2 bg-base-200 rounded-xl flex gap-5"><i class="fa-solid fa-house text-2xl "></i> Home</li></a>
+                    <a href=""><li  class="h-10 py-2 px-2  rounded-xl flex gap-5"><i class="text-2xl fa-brands fa-youtube-shorts"></i> Shorts</li></a>
+                    
+                </ul>
+
+            </div>
+              <div class="divider"></div>
+
+              <div class="">
+                <a href=""><li  class="h-10 py-2 px-2  rounded-xl flex  text-xl font-bold gap-5"> Subscription <i class="fa-solid text-xl fa-angle-right"></i></li></a>
+              </div>
+
+              <div class="mt-3">
+                <ul>
+                     <a href=""><li  class="h-10 py-2 px-2  rounded-xl flex gap-5"><i class="fa-regular text-2xl fa-circle-user"></i> Your Channal</li></a>
+                </ul>
+              </div>
+
+        </aside>
+
+        <section class="bg-blue-600 col-span-10">
+            section
+        </section>
+       
+    </main>
+
+    <footer>
+        
+    </footer>
+
+
+    <script src="/src/main/index.js"></script>
+</body>
+</html>
