@@ -12,12 +12,17 @@
     <!-- Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-
+    <style>
+        .active {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     
     <!-- Navbar -->
-    <header>
+    <header class="sticky top-0 bg-white z-50">
         <nav class="flex justify-between h-15 shadow-xs px-5 items-center">
 
             <!-- Logo -->
@@ -104,10 +109,10 @@
     </header>
 
     <main class="grid grid-cols-1 lg:grid-cols-12">
-        <aside class="col-span-2 p-2.5">
+        <aside class="col-span-2 p-2.5 sticky top-15 overflow-y-auto h-fit">
             <div class="p-2.5">
                 <ul>
-                    <a href=""><li  class="h-10 py-2 px-2 bg-base-200 rounded-xl flex gap-5"><i class="fa-solid fa-house text-2xl "></i> Home</li></a>
+                    <a href="/"><li  class="h-10 py-2 px-2 bg-base-200 rounded-xl flex gap-5"><i class="fa-solid fa-house text-2xl "></i> Home</li></a>
                     <a href=""><li  class="h-10 py-2 px-2  rounded-xl flex gap-5"><i class="text-2xl fa-brands fa-youtube-shorts"></i> Shorts</li></a>
                     
                 </ul>
@@ -129,18 +134,25 @@
 
         <section class=" col-span-10 mt-5 px-5">
             
+            <!-- Cateogyr Buttons -->
             <div class="flex gap-2">
                 <ul>
-                    <li class="btn btn-sm rounded-lg bg-black text-white">All</li>
+                    <li id="AllBtn" onclick="loadVideos()" class="btn btn-sm rounded-lg category-btn active">All</li>
                 </ul>
                 <ul id="category-btn-container" class="flex gap-2">
 
                 </ul>
             </div>
 
+            <!-- Card Section -->
             <div id="video-container" class="grid grid-cols-1 lg:grid-cols-3 gap-2.5">
                 
                
+            </div>
+
+            <!-- Single Vidoe -->
+            <div id="single-section" class="hidden">
+            
             </div>
  
         </section>
